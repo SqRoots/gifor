@@ -1,0 +1,1212 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     53535,       1204]
+NotebookOptionsPosition[     52289,       1172]
+NotebookOutlinePosition[     52648,       1188]
+CellTagsIndexPosition[     52605,       1185]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["1. Demo for gif", "Chapter",
+ CellChangeTimes->{{3.7811724640929146`*^9, 3.781172468164625*^9}, {
+  3.7813267767340326`*^9, 3.781326796035227*^9}, {3.781326857853893*^9, 
+  3.7813268623529863`*^9}},ExpressionUUID->"d41bc6f4-ebba-4fad-81ed-\
+96b35e71c956"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"gifPath", "=", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<gif\>\"", ",", 
+      "\"\<gif_encode__global_color_table.wl\>\""}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Get", "[", "gifPath", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"?", "GIFEncodeGCT`gif"}]}], "Input",
+ CellChangeTimes->{{3.781219931577701*^9, 3.781219990657013*^9}, {
+  3.781324937405682*^9, 3.781324956341617*^9}, {3.7813252847421627`*^9, 
+  3.781325287035798*^9}, {3.781325787562654*^9, 3.781325803098375*^9}, {
+  3.781326809078213*^9, 
+  3.781326810551755*^9}},ExpressionUUID->"8f826e9b-f6e3-49ad-8776-\
+f068fea61ffb"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\n\:3010\:8f93\:5165\:3011\:ff1a\:5b58\:50a8\:8def\
+\:5f84\:ff0c\:56fe\:50cf\:5c3a\:5bf8\:ff0c\:5168\:5c40\:989c\:8272\:8868\:ff0c\
+\:56fe\:50cf\:6570\:636e\:5217\:8868\:ff0c\:91cd\:590d\:64ad\:653e\:6b21\:6570\
+\\n\:3010\:8f93\:51fa\:3011\:ff1a<|\\\"path\\\"->\:5b58\:50a8\:8def\:5f84,\\\"\
+data\\\"->gif\:56fe\:50cf\:6570\:636e\:6d41|>\\n\:3010\:6ce8\:3011\:ff1a\:6240\
+\:6709\:5e16\:90fd\:4f7f\:7528\:5168\:5c40\:989c\:8272\:8868\\n---------------\
+----------------------------------------\\n- \:3010\:5b58\:50a8\:8def\:5f84\
+\:3011\:ff1a\:7edd\:5bf9\:8def\:5f84\\n- \:3010\:56fe\:50cf\:6570\:636e\:3011\
+\:ff1a{\\n   <|\\n     \
+\\\"position\\\"\[Rule]<|\\\"left\\\"\[Rule]0,\\\"top\\\"\[Rule]0|>,\\n     \
+\\\"delay_time\\\"\[Rule]10,\\n     \
+\\\"data\\\"\[Rule]{{index1,index2,...},...}\\n   |>,\\n   \
+<||>,<||>,...\\n}\\n- \:3010\:56fe\:50cf\:5c3a\:5bf8\:3011\:ff1a<|\\\"width\\\
+\"\[Rule]100,\\\"height\\\"\[Rule]100|>\\n- \:3010\:5168\:5c40\:989c\:8272\
+\:8868\:3011[\:4e8c\:7ef4\:5217\:8868]\:ff1a{{r0,g0,b0},{0,0,0},{255,255,255},\
+...}\\n- \:3010\:91cd\:590d\:64ad\:653e\:6b21\:6570\:3011[\:6574\:6570]\:ff1a\
+1 | 2 | ... | Infinity\\n\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Definitions\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Definitions", "Tooltip"]& ], GridBox[{
+                    {
+                    RowBox[{
+                    RowBox[{"gif", "[", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`savePath_", ",", 
+                    "GIFEncodeGCT`Private`imageSize_", ",", 
+                    "GIFEncodeGCT`Private`globalColorTable_", ",", 
+                    "GIFEncodeGCT`Private`imageDataList_", ",", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`repetitTimes_", ":", 
+                    "\[Infinity]"}]}], "]"}], ":=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"GIFEncodeGCT`Private`imageWidth", "=", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageSize", "[", "\<\"width\"\>", 
+                    "]"}]}], ",", 
+                    RowBox[{"GIFEncodeGCT`Private`imageHeight", "=", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageSize", "[", "\<\"height\"\>", 
+                    "]"}]}], ",", 
+                    RowBox[{"GIFEncodeGCT`Private`codeSize", "=", 
+                    RowBox[{"Ceiling", "[", 
+                    RowBox[{"Log", "[", 
+                    RowBox[{"2", ",", 
+                    RowBox[{"Length", "[", 
+                    RowBox[{
+                    "Union", "[", "GIFEncodeGCT`Private`globalColorTable", 
+                    "]"}], "]"}]}], "]"}], "]"}]}], ",", 
+                    "GIFEncodeGCT`Private`exportGIFData"}], "}"}], ",", 
+                    RowBox[{
+                    RowBox[{"GIFEncodeGCT`Private`exportGIFData", "=", 
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"GIFEncodeGCT`Private`cHeader", ",", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`fLogicalScreenDescriptor", "[", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageWidth", ",", 
+                    "GIFEncodeGCT`Private`imageHeight", ",", 
+                    RowBox[{"Association", "[", 
+                    RowBox[{
+                    RowBox[{"\<\"Global Color Table Flag\"\>", "\[Rule]", 
+                    RowBox[{"{", "1", "}"}]}], ",", 
+                    RowBox[{"\<\"Color Resolution\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ",", 
+                    RowBox[{"\<\"Sort Flag\"\>", "\[Rule]", 
+                    RowBox[{"{", "0", "}"}]}], ",", 
+                    RowBox[{"\<\"Size of Global Color Table\"\>", "\[Rule]", 
+                    RowBox[{"IntegerDigits", "[", 
+                    RowBox[{
+                    RowBox[{"GIFEncodeGCT`Private`codeSize", "-", "1"}], ",", 
+                    "2", ",", "3"}], "]"}]}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`fGlobalColorTable", "[", 
+                    "GIFEncodeGCT`Private`globalColorTable", "]"}], ",", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`fApplicationExtension", "[", 
+                    "GIFEncodeGCT`Private`repetitTimes", "]"}], ",", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageHeight", ",", 
+                    "GIFEncodeGCT`Private`imageWidth"}], "}"}], "=", 
+                    RowBox[{"Dimensions", "[", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageData", "[", "\<\"data\"\>", 
+                    "]"}], "]"}]}], ";", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    "GIFEncodeGCT`Private`fGraphicControlExtension", "[", 
+                    RowBox[{"Lookup", "[", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageData", 
+                    ",", "\<\"delay_time\"\>", ",", "100"}], "]"}], "]"}], 
+                    ",", 
+                    RowBox[{"GIFEncodeGCT`Private`fImageDescriptor", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Lookup", "[", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageData", ",", "\<\"position\"\>",
+                     ",", 
+                    RowBox[{"Association", "[", 
+                    RowBox[{
+                    RowBox[{"\<\"left\"\>", "\[Rule]", "0"}], ",", 
+                    RowBox[{"\<\"top\"\>", "\[Rule]", "0"}]}], "]"}]}], "]"}],
+                     "[", "\<\"left\"\>", "]"}], ",", 
+                    RowBox[{
+                    RowBox[{"Lookup", "[", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageData", ",", "\<\"position\"\>",
+                     ",", 
+                    RowBox[{"Association", "[", 
+                    RowBox[{
+                    RowBox[{"\<\"left\"\>", "\[Rule]", "0"}], ",", 
+                    RowBox[{"\<\"top\"\>", "\[Rule]", "0"}]}], "]"}]}], "]"}],
+                     "[", "\<\"top\"\>", "]"}], ",", 
+                    "GIFEncodeGCT`Private`imageWidth", ",", 
+                    "GIFEncodeGCT`Private`imageHeight", ",", 
+                    RowBox[{"Lookup", "[", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageData", 
+                    ",", "\<\"local_color_table_flag\"\>", ",", 
+                    RowBox[{"{", "0", "}"}]}], "]"}], ",", 
+                    RowBox[{"Lookup", "[", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageData", 
+                    ",", "\<\"size_of_local_color_table\"\>", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "]"}]}], 
+                    "]"}], ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Lookup", "[", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageData", 
+                    ",", "\<\"local_color_table_flag\"\>", ",", 
+                    RowBox[{"{", "0", "}"}]}], "]"}], "\[Equal]", 
+                    RowBox[{"{", "0", "}"}]}], ",", 
+                    RowBox[{"GIFEncodeGCT`Private`fImageData", "[", 
+                    RowBox[{
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageData", "[", "\<\"data\"\>", 
+                    "]"}], "]"}], ",", "GIFEncodeGCT`Private`codeSize"}], 
+                    "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"GIFEncodeGCT`Private`fLocalColorTable", "[", 
+                    RowBox[{"Lookup", "[", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageData", 
+                    ",", "\<\"local_color_table\"\>"}], "]"}], "]"}], ",", 
+                    RowBox[{"GIFEncodeGCT`Private`fImageData", "[", 
+                    RowBox[{
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageData", "[", "\<\"data\"\>", 
+                    "]"}], "]"}], ",", "GIFEncodeGCT`Private`codeSize"}], 
+                    "]"}]}], "}"}]}], "]"}]}], "}"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`imageData", ",", 
+                    "GIFEncodeGCT`Private`imageDataList"}], "}"}]}], "]"}], 
+                    ",", "GIFEncodeGCT`Private`cTrailer"}], "}"}], "]"}]}], 
+                    ";", 
+                    RowBox[{"BinaryWrite", "[", 
+                    RowBox[{
+                    "GIFEncodeGCT`Private`savePath", ",", 
+                    "GIFEncodeGCT`Private`exportGIFData"}], "]"}], ";", 
+                    RowBox[{
+                    "Close", "[", "GIFEncodeGCT`Private`savePath", "]"}], ";", 
+                    RowBox[{"Association", "[", 
+                    RowBox[{
+                    
+                    RowBox[{"\<\"path\"\>", "\[Rule]", 
+                    "GIFEncodeGCT`Private`savePath"}], ",", 
+                    
+                    RowBox[{"\<\"data\"\>", "\[Rule]", 
+                    "GIFEncodeGCT`Private`exportGIFData"}]}], "]"}]}]}], 
+                    "]"}]}]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"GIFEncodeGCT`gif\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\n\:3010\:8f93\:5165\:3011\:ff1a\:5b58\:50a8\:8def\
+\:5f84\:ff0c\:56fe\:50cf\:5c3a\:5bf8\:ff0c\:5168\:5c40\:989c\:8272\:8868\:ff0c\
+\:56fe\:50cf\:6570\:636e\:5217\:8868\:ff0c\:91cd\:590d\:64ad\:653e\:6b21\:6570\
+\\n\:3010\:8f93\:51fa\:3011\:ff1a<|\\\"path\\\"->\:5b58\:50a8\:8def\:5f84,\\\"\
+data\\\"->gif\:56fe\:50cf\:6570\:636e\:6d41|>\\n\:3010\:6ce8\:3011\:ff1a\:6240\
+\:6709\:5e16\:90fd\:4f7f\:7528\:5168\:5c40\:989c\:8272\:8868\\n---------------\
+----------------------------------------\\n- \:3010\:5b58\:50a8\:8def\:5f84\
+\:3011\:ff1a\:7edd\:5bf9\:8def\:5f84\\n- \:3010\:56fe\:50cf\:6570\:636e\:3011\
+\:ff1a{\\n   <|\\n     \
+\\\"position\\\"\[Rule]<|\\\"left\\\"\[Rule]0,\\\"top\\\"\[Rule]0|>,\\n     \
+\\\"delay_time\\\"\[Rule]10,\\n     \
+\\\"data\\\"\[Rule]{{index1,index2,...},...}\\n   |>,\\n   \
+<||>,<||>,...\\n}\\n- \:3010\:56fe\:50cf\:5c3a\:5bf8\:3011\:ff1a<|\\\"width\\\
+\"\[Rule]100,\\\"height\\\"\[Rule]100|>\\n- \:3010\:5168\:5c40\:989c\:8272\
+\:8868\:3011[\:4e8c\:7ef4\:5217\:8868]\:ff1a{{r0,g0,b0},{0,0,0},{255,255,255},\
+...}\\n- \:3010\:91cd\:590d\:64ad\:653e\:6b21\:6570\:3011[\:6574\:6570]\:ff1a\
+1 | 2 | ... | Infinity\\n\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {2., 8.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "\n\:3010\:8f93\:5165\:3011\:ff1a\:5b58\:50a8\:8def\:5f84\:ff0c\:56fe\
+\:50cf\:5c3a\:5bf8\:ff0c\:5168\:5c40\:989c\:8272\:8868\:ff0c\:56fe\:50cf\:6570\
+\:636e\:5217\:8868\:ff0c\:91cd\:590d\:64ad\:653e\:6b21\:6570\n\:3010\:8f93\
+\:51fa\:3011\:ff1a<|\"path\"->\:5b58\:50a8\:8def\:5f84,\"data\"->gif\:56fe\
+\:50cf\:6570\:636e\:6d41|>\n\:3010\:6ce8\:3011\:ff1a\:6240\:6709\:5e16\:90fd\
+\:4f7f\:7528\:5168\:5c40\:989c\:8272\:8868\n\
+-------------------------------------------------------\n- \:3010\:5b58\:50a8\
+\:8def\:5f84\:3011\:ff1a\:7edd\:5bf9\:8def\:5f84\n- \:3010\:56fe\:50cf\:6570\
+\:636e\:3011\:ff1a{\n   <|\n     \
+\"position\"\[Rule]<|\"left\"\[Rule]0,\"top\"\[Rule]0|>,\n     \"delay_time\"\
+\[Rule]10,\n     \"data\"\[Rule]{{index1,index2,...},...}\n   |>,\n   \
+<||>,<||>,...\n}\n- \:3010\:56fe\:50cf\:5c3a\:5bf8\:3011\:ff1a<|\"width\"\
+\[Rule]100,\"height\"\[Rule]100|>\n- \:3010\:5168\:5c40\:989c\:8272\:8868\
+\:3011[\:4e8c\:7ef4\:5217\:8868]\:ff1a{{r0,g0,b0},{0,0,0},{255,255,255},...}\n\
+- \:3010\:91cd\:590d\:64ad\:653e\:6b21\:6570\:3011[\:6574\:6570]\:ff1a1 | 2 | \
+... | Infinity\n", "Documentation" -> None, "OwnValues" -> None, "UpValues" -> 
+    None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, GIFEncodeGCT`gif, {GIFEncodeGCT`gif[
+         Pattern[GIFEncodeGCT`Private`savePath, 
+          Blank[]], 
+         Pattern[GIFEncodeGCT`Private`imageSize, 
+          Blank[]], 
+         Pattern[GIFEncodeGCT`Private`globalColorTable, 
+          Blank[]], 
+         Pattern[GIFEncodeGCT`Private`imageDataList, 
+          Blank[]], 
+         Optional[
+          Pattern[GIFEncodeGCT`Private`repetitTimes, 
+           Blank[]], 
+          DirectedInfinity[1]]] :> 
+       Module[{GIFEncodeGCT`Private`imageWidth = 
+          GIFEncodeGCT`Private`imageSize["width"], 
+          GIFEncodeGCT`Private`imageHeight = 
+          GIFEncodeGCT`Private`imageSize["height"], 
+          GIFEncodeGCT`Private`codeSize = Ceiling[
+            Log[2, 
+             Length[
+              Union[GIFEncodeGCT`Private`globalColorTable]]]], 
+          GIFEncodeGCT`Private`exportGIFData}, 
+         GIFEncodeGCT`Private`exportGIFData = 
+          Flatten[{GIFEncodeGCT`Private`cHeader, 
+             GIFEncodeGCT`Private`fLogicalScreenDescriptor[
+             GIFEncodeGCT`Private`imageWidth, 
+              GIFEncodeGCT`Private`imageHeight, 
+              Association[
+              "Global Color Table Flag" -> {1}, 
+               "Color Resolution" -> {1, 1, 1}, "Sort Flag" -> {0}, 
+               "Size of Global Color Table" -> 
+               IntegerDigits[GIFEncodeGCT`Private`codeSize - 1, 2, 3]]], 
+             GIFEncodeGCT`Private`fGlobalColorTable[
+             GIFEncodeGCT`Private`globalColorTable], 
+             GIFEncodeGCT`Private`fApplicationExtension[
+             GIFEncodeGCT`Private`repetitTimes], 
+             
+             Table[{GIFEncodeGCT`Private`imageHeight, 
+                 GIFEncodeGCT`Private`imageWidth} = Dimensions[
+                 GIFEncodeGCT`Private`imageData["data"]]; {
+                GIFEncodeGCT`Private`fGraphicControlExtension[
+                 Lookup[GIFEncodeGCT`Private`imageData, "delay_time", 100]], 
+                GIFEncodeGCT`Private`fImageDescriptor[
+                 Lookup[GIFEncodeGCT`Private`imageData, "position", 
+                  Association["left" -> 0, "top" -> 0]]["left"], 
+                 Lookup[GIFEncodeGCT`Private`imageData, "position", 
+                  Association["left" -> 0, "top" -> 0]]["top"], 
+                 GIFEncodeGCT`Private`imageWidth, 
+                 GIFEncodeGCT`Private`imageHeight, 
+                 Lookup[
+                 GIFEncodeGCT`Private`imageData, "local_color_table_flag", {
+                  0}], 
+                 Lookup[
+                 GIFEncodeGCT`Private`imageData, 
+                  "size_of_local_color_table", {0, 0, 0}]], 
+                If[
+                Lookup[GIFEncodeGCT`Private`imageData, 
+                   "local_color_table_flag", {0}] == {0}, 
+                 GIFEncodeGCT`Private`fImageData[
+                  Flatten[
+                   GIFEncodeGCT`Private`imageData["data"]], 
+                  GIFEncodeGCT`Private`codeSize], {
+                  GIFEncodeGCT`Private`fLocalColorTable[
+                   Lookup[
+                   GIFEncodeGCT`Private`imageData, "local_color_table"]], 
+                  GIFEncodeGCT`Private`fImageData[
+                   Flatten[
+                    GIFEncodeGCT`Private`imageData["data"]], 
+                   GIFEncodeGCT`Private`codeSize]}]}, {
+              GIFEncodeGCT`Private`imageData, 
+               GIFEncodeGCT`Private`imageDataList}], 
+             GIFEncodeGCT`Private`cTrailer}]; 
+         BinaryWrite[
+          GIFEncodeGCT`Private`savePath, GIFEncodeGCT`Private`exportGIFData]; 
+         Close[GIFEncodeGCT`Private`savePath]; 
+         Association[
+          "path" -> GIFEncodeGCT`Private`savePath, "data" -> 
+           GIFEncodeGCT`Private`exportGIFData]]}], "SubValues" -> None, 
+    "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> None, "Attributes" -> {}, "FullName" -> "GIFEncodeGCT`gif"], 
+   False]]], "Output",
+ CellChangeTimes->{
+  3.7813252903590403`*^9, {3.7813253392545586`*^9, 3.7813253682950416`*^9}, {
+   3.7813254097864637`*^9, 3.781325439462679*^9}, {3.7813258046196303`*^9, 
+   3.7813258107038093`*^9}, 3.7813265171800547`*^9},
+ CellLabel->
+  "Out[440]=",ExpressionUUID->"0c808c0c-0c6a-44b2-aa54-2c8f096a621b"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"imageDataList", "=", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"<|", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\"\<position\>\"", "\[Rule]", 
+          RowBox[{"<|", 
+           RowBox[{
+            RowBox[{"\"\<left\>\"", "\[Rule]", "0"}], ",", 
+            RowBox[{"\"\<top\>\"", "\[Rule]", "0"}]}], "|>"}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"\"\<delay_time\>\"", "\[Rule]", "10"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"\"\<data\>\"", "\[Rule]", 
+          RowBox[{"ConstantArray", "[", 
+           RowBox[{"1", ",", 
+            RowBox[{"{", 
+             RowBox[{"100", ",", "100"}], "}"}]}], "]"}]}]}], 
+        "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"<|", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\"\<position\>\"", "\[Rule]", 
+          RowBox[{"<|", 
+           RowBox[{
+            RowBox[{"\"\<left\>\"", "\[Rule]", "0"}], ",", 
+            RowBox[{"\"\<top\>\"", "\[Rule]", "0"}]}], "|>"}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"\"\<delay_time\>\"", "\[Rule]", "10"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"\"\<data\>\"", "\[Rule]", 
+          RowBox[{"ConstantArray", "[", 
+           RowBox[{"0", ",", 
+            RowBox[{"{", 
+             RowBox[{"100", ",", "100"}], "}"}]}], "]"}]}]}], 
+        "\[IndentingNewLine]", "|>"}]}], "}"}], "~", "Join", "~", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"<|", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\"\<position\>\"", "\[Rule]", 
+          RowBox[{"<|", 
+           RowBox[{
+            RowBox[{"\"\<left\>\"", "\[Rule]", 
+             RowBox[{"RandomInteger", "[", "70", "]"}]}], ",", 
+            RowBox[{"\"\<top\>\"", "\[Rule]", 
+             RowBox[{"RandomInteger", "[", "70", "]"}]}]}], "|>"}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"\"\<delay_time\>\"", "\[Rule]", "10"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"\"\<data\>\"", "\[Rule]", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "1"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"20", ",", "20"}], "}"}]}], "]"}]}]}], 
+        "\[IndentingNewLine]", "|>"}], ",", 
+       RowBox[{"{", "10", "}"}]}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"file", "=", "\"\<D:/12312312312.gif\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tt", "=", 
+   RowBox[{"GIFEncodeGCT`gif", "[", 
+    RowBox[{"file", ",", "\[IndentingNewLine]", 
+     RowBox[{"<|", 
+      RowBox[{
+       RowBox[{"\"\<width\>\"", "\[Rule]", "100"}], ",", 
+       RowBox[{"\"\<height\>\"", "\[Rule]", "100"}]}], "|>"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"255", ",", "255", ",", "255"}], "}"}]}], "}"}], ",", 
+     "\[IndentingNewLine]", "imageDataList", ",", "\[IndentingNewLine]", 
+     "Infinity"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.781324997446094*^9, {3.7813254458815994`*^9, 3.781325451148732*^9}},
+ CellLabel->
+  "In[441]:=",ExpressionUUID->"db54bc8f-7b3a-445f-baff-c39e83a134b7"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["2. Demo for LZW", "Chapter",
+ CellChangeTimes->{{3.7813267987991667`*^9, 3.7813268049475718`*^9}, 
+   3.7813268643106003`*^9},ExpressionUUID->"42e039bd-27a4-46f8-bd9c-\
+ebead69b5c50"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"lzwPath", "=", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<gif\>\"", ",", 
+      "\"\<variable_length_code_LZW_compression.wl\>\""}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Get", "[", "lzwPath", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"?", "VLZWCompress`VLZW"}]}], "Input",
+ CellChangeTimes->{{3.7813268137701516`*^9, 3.7813268186495275`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"4cfe4754-7d82-4ab8-99d7-0fea1ef63d8a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\:8f93\:5165\:ff1adata\:ff08\:4e00\:7ef4\:5217\:8868\
+\:ff0c\:6bcf\:4e2a\:5143\:7d20\:662f\:989c\:8272\:8868\:4e2d\:7684\:7d22\:5f15\
+\\n               codeSize\:ff08\:6574\:6570\:ff0c\:989c\:8272\:8868\:7684\
+\:4f4d\:6570\:ff0c1~7\:ff0c\:5f53\:4f4d\:6570\:7b49\:4e8e1\:65f6\:4f1a\:81ea\
+\:52a8\:4f7f\:75282\:66ff\:4ee3\:4e4b\:ff09\\n         \:8f93\:51fa\:ff1a\
+\:4e00\:7ef4\:5217\:8868\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Definitions\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Definitions", "Tooltip"]& ], GridBox[{
+                    {
+                    RowBox[{
+                    RowBox[{"VLZW", "[", 
+                    RowBox[{
+                    "VLZWCompress`Private`data_", ",", 
+                    "VLZWCompress`Private`codeSize_"}], "]"}], ":=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"VLZWCompress`Private`dictInit", "=", 
+                    RowBox[{"VLZWCompress`Private`initDict", "[", 
+                    RowBox[{"Max", "[", 
+                    RowBox[{"VLZWCompress`Private`codeSize", ",", "2"}], 
+                    "]"}], "]"}]}], ",", "VLZWCompress`Private`dict", ",", 
+                    RowBox[{"VLZWCompress`Private`c", "=", "0"}], ",", 
+                    RowBox[{"VLZWCompress`Private`p", "=", 
+                    RowBox[{"{", "}"}]}], ",", 
+                    RowBox[{"VLZWCompress`Private`pc", "=", 
+                    RowBox[{"{", "}"}]}], ",", 
+                    "VLZWCompress`Private`bitDataLeftToRight"}], "}"}], ",", 
+                    RowBox[{
+                    RowBox[{
+                    "VLZWCompress`Private`dict", "=", 
+                    "VLZWCompress`Private`dictInit"}], ";", 
+                    RowBox[{"VLZWCompress`Private`bitDataLeftToRight", "=", 
+                    RowBox[{"IntegerDigits", "[", 
+                    RowBox[{
+                    RowBox[{
+                    "VLZWCompress`Private`dict", "[", "\<\"clear_code\"\>", 
+                    "]"}], ",", "2", ",", 
+                    RowBox[{
+                    "VLZWCompress`Private`dict", 
+                    "[", "\<\"current_code_length\"\>", "]"}]}], "]"}]}], ";", 
+                    RowBox[{"Do", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    "VLZWCompress`Private`c", "=", 
+                    "VLZWCompress`Private`da"}], ";", 
+                    RowBox[{"VLZWCompress`Private`pc", "=", 
+                    RowBox[{"Append", "[", 
+                    RowBox[{
+                    "VLZWCompress`Private`p", ",", "VLZWCompress`Private`c"}],
+                     "]"}]}], ";", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"KeyExistsQ", "[", 
+                    RowBox[{
+                    RowBox[{
+                    "VLZWCompress`Private`dict", "[", "\<\"dict\"\>", "]"}], 
+                    ",", "VLZWCompress`Private`pc"}], "]"}], ",", 
+                    RowBox[{
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{
+                    "VLZWCompress`Private`p", ",", "VLZWCompress`Private`c"}],
+                     "]"}], ";"}], ",", 
+                    RowBox[{
+                    RowBox[{"VLZWCompress`Private`bitDataLeftToRight", "=", 
+                    RowBox[{"Join", "[", 
+                    RowBox[{
+                    RowBox[{"IntegerDigits", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    "VLZWCompress`Private`dict", "[", "\<\"dict\"\>", "]"}], 
+                    "[", "VLZWCompress`Private`p", "]"}], ",", "2", ",", 
+                    RowBox[{
+                    "VLZWCompress`Private`dict", 
+                    "[", "\<\"current_code_length\"\>", "]"}]}], "]"}], ",", 
+                    "VLZWCompress`Private`bitDataLeftToRight"}], "]"}]}], ";", 
+                    RowBox[{"AssociateTo", "[", 
+                    RowBox[{
+                    RowBox[{
+                    "VLZWCompress`Private`dict", "[", "\<\"dict\"\>", "]"}], 
+                    ",", 
+                    RowBox[{"VLZWCompress`Private`pc", "\[Rule]", 
+                    RowBox[{
+                    RowBox[{
+                    "VLZWCompress`Private`dict", "[", "\<\"current_index\"\>",
+                     "]"}], "++"}]}]}], "]"}], ";", 
+                    RowBox[{"VLZWCompress`Private`p", "=", 
+                    RowBox[{"{", "VLZWCompress`Private`c", "}"}]}], ";", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    "VLZWCompress`Private`dict", "[", "\<\"current_index\"\>",
+                     "]"}], "\[Equal]", 
+                    RowBox[{
+                    SuperscriptBox["2", 
+                    RowBox[{
+                    "VLZWCompress`Private`dict", 
+                    "[", "\<\"current_code_length\"\>", "]"}]], "+", "1"}]}], 
+                    ",", 
+                    RowBox[{
+                    RowBox[{
+                    "VLZWCompress`Private`dict", 
+                    "[", "\<\"current_code_length\"\>", "]"}], "++"}]}], 
+                    "]"}], ";", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    "VLZWCompress`Private`dict", "[", "\<\"current_index\"\>",
+                     "]"}], "\[Equal]", "4095"}], ",", 
+                    RowBox[{
+                    RowBox[{"VLZWCompress`Private`bitDataLeftToRight", "=", 
+                    RowBox[{"Join", "[", 
+                    RowBox[{
+                    RowBox[{"IntegerDigits", "[", 
+                    RowBox[{
+                    RowBox[{
+                    "VLZWCompress`Private`dict", "[", "\<\"clear_code\"\>", 
+                    "]"}], ",", "2", ",", 
+                    RowBox[{
+                    "VLZWCompress`Private`dict", 
+                    "[", "\<\"current_code_length\"\>", "]"}]}], "]"}], ",", 
+                    "VLZWCompress`Private`bitDataLeftToRight"}], "]"}]}], ";", 
+                    RowBox[{
+                    "VLZWCompress`Private`dict", "=", 
+                    "VLZWCompress`Private`dictInit"}], ";"}]}], "]"}], 
+                    ";"}]}], "]"}], ";"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "VLZWCompress`Private`da", ",", 
+                    "VLZWCompress`Private`data"}], "}"}]}], "]"}], ";", 
+                    RowBox[{"VLZWCompress`Private`bitDataLeftToRight", "=", 
+                    RowBox[{"Join", "[", 
+                    RowBox[{
+                    RowBox[{"Join", "[", 
+                    RowBox[{
+                    RowBox[{"IntegerDigits", "[", 
+                    RowBox[{
+                    RowBox[{
+                    "VLZWCompress`Private`dict", "[", "\<\"end_code\"\>", 
+                    "]"}], ",", "2", ",", 
+                    RowBox[{
+                    "VLZWCompress`Private`dict", 
+                    "[", "\<\"current_code_length\"\>", "]"}]}], "]"}], ",", 
+                    RowBox[{"IntegerDigits", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    "VLZWCompress`Private`dict", "[", "\<\"dict\"\>", "]"}], 
+                    "[", "VLZWCompress`Private`p", "]"}], ",", "2", ",", 
+                    RowBox[{
+                    "VLZWCompress`Private`dict", 
+                    "[", "\<\"current_code_length\"\>", "]"}]}], "]"}]}], 
+                    "]"}], ",", "VLZWCompress`Private`bitDataLeftToRight"}], 
+                    "]"}]}], ";", 
+                    RowBox[{"Join", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"Max", "[", 
+                    RowBox[{"VLZWCompress`Private`codeSize", ",", "2"}], 
+                    "]"}], "}"}], ",", 
+                    RowBox[{
+                    "VLZWCompress`Private`packBitDataToByte", "[", 
+                    "VLZWCompress`Private`bitDataLeftToRight", "]"}]}], 
+                    "]"}]}]}], "]"}]}]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"VLZWCompress`VLZW\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\:8f93\:5165\:ff1adata\:ff08\:4e00\:7ef4\:5217\:8868\
+\:ff0c\:6bcf\:4e2a\:5143\:7d20\:662f\:989c\:8272\:8868\:4e2d\:7684\:7d22\:5f15\
+\\n               codeSize\:ff08\:6574\:6570\:ff0c\:989c\:8272\:8868\:7684\
+\:4f4d\:6570\:ff0c1~7\:ff0c\:5f53\:4f4d\:6570\:7b49\:4e8e1\:65f6\:4f1a\:81ea\
+\:52a8\:4f7f\:75282\:66ff\:4ee3\:4e4b\:ff09\\n         \:8f93\:51fa\:ff1a\
+\:4e00\:7ef4\:5217\:8868\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {2., 8.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "\:8f93\:5165\:ff1adata\:ff08\:4e00\:7ef4\:5217\:8868\:ff0c\:6bcf\:4e2a\
+\:5143\:7d20\:662f\:989c\:8272\:8868\:4e2d\:7684\:7d22\:5f15\n               \
+codeSize\:ff08\:6574\:6570\:ff0c\:989c\:8272\:8868\:7684\:4f4d\:6570\:ff0c1~7\
+\:ff0c\:5f53\:4f4d\:6570\:7b49\:4e8e1\:65f6\:4f1a\:81ea\:52a8\:4f7f\:75282\
+\:66ff\:4ee3\:4e4b\:ff09\n         \
+\:8f93\:51fa\:ff1a\:4e00\:7ef4\:5217\:8868", "Documentation" -> None, 
+    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, VLZWCompress`VLZW, {VLZWCompress`VLZW[
+         Pattern[VLZWCompress`Private`data, 
+          Blank[]], 
+         Pattern[VLZWCompress`Private`codeSize, 
+          Blank[]]] :> 
+       Module[{VLZWCompress`Private`dictInit = VLZWCompress`Private`initDict[
+            Max[VLZWCompress`Private`codeSize, 2]], VLZWCompress`Private`dict,
+           VLZWCompress`Private`c = 0, VLZWCompress`Private`p = {}, 
+          VLZWCompress`Private`pc = {}, 
+          VLZWCompress`Private`bitDataLeftToRight}, 
+         VLZWCompress`Private`dict = VLZWCompress`Private`dictInit; 
+         VLZWCompress`Private`bitDataLeftToRight = IntegerDigits[
+            VLZWCompress`Private`dict["clear_code"], 2, 
+            VLZWCompress`Private`dict["current_code_length"]]; 
+         Do[VLZWCompress`Private`c = VLZWCompress`Private`da; 
+           VLZWCompress`Private`pc = 
+            Append[VLZWCompress`Private`p, VLZWCompress`Private`c]; If[
+             KeyExistsQ[
+              VLZWCompress`Private`dict["dict"], VLZWCompress`Private`pc], 
+             AppendTo[VLZWCompress`Private`p, VLZWCompress`Private`c]; Null, 
+             VLZWCompress`Private`bitDataLeftToRight = Join[
+                IntegerDigits[
+                 VLZWCompress`Private`dict["dict"][VLZWCompress`Private`p], 2, 
+                 VLZWCompress`Private`dict["current_code_length"]], 
+                VLZWCompress`Private`bitDataLeftToRight]; AssociateTo[
+               VLZWCompress`Private`dict["dict"], VLZWCompress`Private`pc -> 
+               Increment[
+                 VLZWCompress`Private`dict["current_index"]]]; 
+             VLZWCompress`Private`p = {VLZWCompress`Private`c}; 
+             If[VLZWCompress`Private`dict["current_index"] == 
+               2^VLZWCompress`Private`dict["current_code_length"] + 1, 
+               Increment[
+                VLZWCompress`Private`dict["current_code_length"]]]; 
+             If[VLZWCompress`Private`dict["current_index"] == 4095, 
+               VLZWCompress`Private`bitDataLeftToRight = Join[
+                  IntegerDigits[
+                   VLZWCompress`Private`dict["clear_code"], 2, 
+                   VLZWCompress`Private`dict["current_code_length"]], 
+                  VLZWCompress`Private`bitDataLeftToRight]; 
+               VLZWCompress`Private`dict = VLZWCompress`Private`dictInit; 
+               Null]; Null]; Null, {
+           VLZWCompress`Private`da, VLZWCompress`Private`data}]; 
+         VLZWCompress`Private`bitDataLeftToRight = Join[
+            Join[
+             IntegerDigits[
+              VLZWCompress`Private`dict["end_code"], 2, 
+              VLZWCompress`Private`dict["current_code_length"]], 
+             IntegerDigits[
+              VLZWCompress`Private`dict["dict"][VLZWCompress`Private`p], 2, 
+              VLZWCompress`Private`dict["current_code_length"]]], 
+            VLZWCompress`Private`bitDataLeftToRight]; Join[{
+            Max[VLZWCompress`Private`codeSize, 2]}, 
+           VLZWCompress`Private`packBitDataToByte[
+           VLZWCompress`Private`bitDataLeftToRight]]]}], "SubValues" -> None, 
+    "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> None, "Attributes" -> {}, "FullName" -> "VLZWCompress`VLZW"],
+    False]]], "Output",
+ CellChangeTimes->{3.781326819642427*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"aedb94a6-bf4e-4284-a006-933f821dd155"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"VLZWCompress`VLZW", "[", 
+  RowBox[{
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"6", ",", "100"}], "]"}], ",", "3"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7813268225943403`*^9, 3.7813268421515417`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"1658be08-8b4f-4a59-9819-ba62562daeea"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "3", ",", "51", ",", "72", ",", "54", ",", "166", ",", "97", ",", "101", 
+   ",", "140", ",", "34", ",", "68", ",", "96", ",", "68", ",", "150", ",", 
+   "71", ",", "110", ",", "3", ",", "3", ",", "1", ",", "116", ",", "162", 
+   ",", "17", ",", "0", ",", "129", ",", "208", ",", "48", ",", "197", ",", 
+   "102", ",", "0", ",", "20", ",", "33", ",", "192", ",", "226", ",", "84", 
+   ",", "0", ",", "128", ",", "32", ",", "122", ",", "65", ",", "6", ",", 
+   "55", ",", "183", ",", "130", ",", "72", ",", "17", ",", "74", ",", "189", 
+   ",", "34", ",", "39", ",", "2", ",", "65", ",", "8", ",", "10", ",", "36", 
+   ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{3.7813268427719135`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"fbd913e1-47a5-418f-8696-ced6f6f6c650"]
+}, Open  ]]
+}, Closed]]
+},
+WindowSize->{1358, 1357},
+WindowMargins->{{Automatic, 364}, {Automatic, 264}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (2019\:5e744\:67088\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 261, 4, 67, "Chapter",ExpressionUUID->"d41bc6f4-ebba-4fad-81ed-96b35e71c956"],
+Cell[CellGroupData[{
+Cell[866, 30, 741, 17, 67, "Input",ExpressionUUID->"8f826e9b-f6e3-49ad-8776-f068fea61ffb"],
+Cell[1610, 49, 24552, 523, 557, "Output",ExpressionUUID->"0c808c0c-0c6a-44b2-aa54-2c8f096a621b"]
+}, Open  ]],
+Cell[26177, 575, 3386, 86, 409, "Input",ExpressionUUID->"db54bc8f-7b3a-445f-baff-c39e83a134b7"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[29600, 666, 189, 3, 56, "Chapter",ExpressionUUID->"42e039bd-27a4-46f8-bd9c-ebead69b5c50"],
+Cell[CellGroupData[{
+Cell[29814, 673, 575, 13, 67, "Input",ExpressionUUID->"4cfe4754-7d82-4ab8-99d7-0fea1ef63d8a"],
+Cell[30392, 688, 20709, 454, 151, "Output",ExpressionUUID->"aedb94a6-bf4e-4284-a006-933f821dd155"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51138, 1147, 309, 6, 28, "Input",ExpressionUUID->"1658be08-8b4f-4a59-9819-ba62562daeea"],
+Cell[51450, 1155, 811, 13, 84, "Output",ExpressionUUID->"fbd913e1-47a5-418f-8696-ced6f6f6c650"]
+}, Open  ]]
+}, Closed]]
+}
+]
+*)
+
