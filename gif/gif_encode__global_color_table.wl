@@ -20,6 +20,7 @@ gif::usage ="
      \"position\"\[Rule]<|\"left\"\[Rule]0,\"top\"\[Rule]0|>,
      \"delay_time\"\[Rule]10,
      \"data\"\[Rule]{{index1,index2,...},...}
+     \"data_lzw\"\[Rule]{byte,...}   (*\:53ef\:9009\:ff0c\:5982\:679c\:6709\:5219\:5ffd\:7565data*)
    |>,
    <||>,<||>,...
 }
@@ -76,8 +77,8 @@ Lookup[imageData,"local_color_table_flag",{0}],
 Lookup[imageData,"size_of_local_color_table",{0,0,0}]
 ],
 If[Lookup[imageData,"local_color_table_flag",{0}]=={0},
-fImageData[Flatten[imageData["data"]],codeSize],
-{fLocalColorTable[Lookup[imageData,"local_color_table"]],fImageData[Flatten[imageData["data"]],codeSize]}
+Lookup[imageData,"data_lzw",fImageData[Flatten[imageData["data"]],codeSize]],
+{fLocalColorTable[Lookup[imageData,"local_color_table"]],Lookup[imageData,"data_lzw",fImageData[Flatten[imageData["data"]],codeSize]]}
 ]
 },{imageData,imageDataList}],
 
