@@ -5,7 +5,9 @@
 (*\:4f5c\:8005\:ff1a\:674e\:5ba3\:ff08https://lixuan.xyz\:ff09*)
 (*2019-10-29*)
 
-Get[FileNameJoin[{NotebookDirectory[],"gif","variable_length_code_LZW_compression.wl"}]];
+Get["./variable_length_code_LZW_compression.wl"];
+(*Get["variable_length_code_LZW_compression.wl",Path->"."];*)
+(*Get["./variable_length_code_LZW_compression.wl"];*)
 
 BeginPackage["GIFEncodeGCT`",{"VLZWCompress`"}]
 
@@ -15,17 +17,18 @@ gif::usage ="
 \:3010\:6ce8\:3011\:ff1a\:6240\:6709\:5e16\:90fd\:4f7f\:7528\:5168\:5c40\:989c\:8272\:8868
 -------------------------------------------------------
 - \:3010\:5b58\:50a8\:8def\:5f84\:3011\:ff1a\:7edd\:5bf9\:8def\:5f84
+- \:3010\:56fe\:50cf\:5c3a\:5bf8\:3011\:ff1a<|\"width\"\[Rule]100,\"height\"\[Rule]100|>
+- \:3010\:5168\:5c40\:989c\:8272\:8868\:3011[\:4e8c\:7ef4\:5217\:8868]\:ff1a{{r0,g0,b0},{0,0,0},{255,255,255},...}
 - \:3010\:56fe\:50cf\:6570\:636e\:3011\:ff1a{
    <|
      \"position\"\[Rule]<|\"left\"\[Rule]0,\"top\"\[Rule]0|>,
      \"delay_time\"\[Rule]10,
-     \"data\"\[Rule]{{index1,index2,...},...}
+     \"data\"\[Rule]{{index1,index2,...},...},
+     \"frame_size\"-><|\"width\"->100,\"height\"->100|>(*\:5f53\:4f7f\:7528data\:65f6\:ff0c\:5ffd\:7565\:6b64\:9879\:ff0c\:5f53\:4f7f\:7528data_lzw\:65f6\:ff0c\:5fc5\:9700\:5305\:542b\:6b64\:9879*),
      \"data_lzw\"\[Rule]{byte,...}   (*\:53ef\:9009\:ff0c\:5982\:679c\:6709\:5219\:5ffd\:7565data*)
    |>,
    <||>,<||>,...
 }
-- \:3010\:56fe\:50cf\:5c3a\:5bf8\:3011\:ff1a<|\"width\"\[Rule]100,\"height\"\[Rule]100|>
-- \:3010\:5168\:5c40\:989c\:8272\:8868\:3011[\:4e8c\:7ef4\:5217\:8868]\:ff1a{{r0,g0,b0},{0,0,0},{255,255,255},...}
 - \:3010\:91cd\:590d\:64ad\:653e\:6b21\:6570\:3011[\:6574\:6570]\:ff1a1 | 2 | ... | Infinity
 "
 
@@ -64,7 +67,10 @@ fApplicationExtension[repetitTimes],
 
 (*Data*)
 Table[
-{imageHeight,imageWidth}=Dimensions[imageData["data"]];
+If[KeyExistsQ[imageData,"data"],
+{imageHeight,imageWidth}=Dimensions[imageData["data"]],
+{imageHeight,imageWidth}={#["height"],#["width"]}&@imageData["frame_size"]
+];
 
 {
 fGraphicControlExtension[Lookup[imageData,"delay_time",100]],
