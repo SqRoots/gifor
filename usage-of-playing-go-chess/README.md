@@ -38,5 +38,5 @@
 | go-chess-世界AlphaGo0历程40模块40天19-41323.gif | 522帧    | 0.13MB             | 15.07MB              | 0.86%      |
 | go-chess-世界AlphaGo0历程40模块40天20-41322.gif | 445帧    | 0.12MB             | 12.19MB              | 0.98%      |
 
-- ![img](https://lixuan.xyz/blog/wp-content/uploads/2019/11/go-chess-%E4%B8%96%E7%95%8CAlphaGo0%E5%8E%86%E7%A8%8B40%E6%A8%A1%E5%9D%9740%E5%A4%A920-41322.gif)
-- ![img](https://lixuan.xyz/blog/wp-content/uploads/2019/11/go-chess-%E4%B8%96%E7%95%8CAlphaGo0%E5%8E%86%E7%A8%8B40%E6%A8%A1%E5%9D%9740%E5%A4%A919-41323.gif)
+- ![img](export-image/go-chess-世界AlphaGo0历程40模块40天10-41332.gif)
+- ![img](export-image/go-chess-世界AlphaGo0历程40模块40天20-41322.gif)
