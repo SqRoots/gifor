@@ -72,7 +72,7 @@ gifImageData=Flatten[{<|"position"-><|"left"->0,"top"->0|>,"delay_time"->delayTi
 {fAddPiece[step["add"],True,lzwData,gifInfo,delayTime],fSubPiece[step["sub"],lzwData,gifInfo],fAddPiece[step["add"],False,lzwData,gifInfo,delayTime]}
 ,{step,stepStatus}]];
 
-GIFEncodeGCT`gif[savePath,<|"width"->gifInfo["gif_width"],"height"->gifInfo["gif_height"]|>,globalColorTable["global_color_table"],gifImageData,Infinity];
+GIFEncodeGCT`gifEncode[savePath,<|"width"->gifInfo["gif_width"],"height"->gifInfo["gif_height"]|>,globalColorTable["global_color_table"],gifImageData,Infinity];
 ];
 
 

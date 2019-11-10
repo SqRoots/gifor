@@ -11,7 +11,7 @@ Get["./variable_length_code_LZW_compression.wl"];
 
 BeginPackage["GIFEncodeGCT`",{"VLZWCompress`"}]
 
-gif::usage ="
+gifEncode::usage ="
 \:3010\:8f93\:5165\:3011\:ff1a\:5b58\:50a8\:8def\:5f84\:ff0c\:56fe\:50cf\:5c3a\:5bf8\:ff0c\:5168\:5c40\:989c\:8272\:8868\:ff0c\:56fe\:50cf\:6570\:636e\:5217\:8868\:ff0c\:91cd\:590d\:64ad\:653e\:6b21\:6570
 \:3010\:8f93\:51fa\:3011\:ff1a<|\"path\"->\:5b58\:50a8\:8def\:5f84,\"data\"->gif\:56fe\:50cf\:6570\:636e\:6d41|>
 \:3010\:6ce8\:3011\:ff1a\:6240\:6709\:5e16\:90fd\:4f7f\:7528\:5168\:5c40\:989c\:8272\:8868
@@ -42,7 +42,7 @@ globalColorTable      \:5217\:8868   {{r,g,b},{0,128,255},...};
 repetitTimes          \:6574\:6570   1~65535\:ff0cInfinity;
 imageDataList         \:5217\:8868\:ff1a{<|"position"\[Rule]<|"left"\[Rule]0,"top"\[Rule]0|>,"delay_time"\[Rule]10,"data"\[Rule]{{index1,index2,...},...}|>,...};
 *)
-gif[savePath_,imageSize_,globalColorTable_,imageDataList_,repetitTimes_: Infinity]:=Module[{
+gifEncode[savePath_,imageSize_,globalColorTable_,imageDataList_,repetitTimes_: Infinity]:=Module[{
 imageWidth=imageSize["width"],
 imageHeight=imageSize["height"],
 codeSize=Ceiling[Log[2,Length[Union[globalColorTable]]]],
