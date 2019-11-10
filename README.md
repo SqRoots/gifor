@@ -15,8 +15,6 @@
 
 本文主要介绍GIF编码协议的逻辑和流程。
 
-Mathematica程序可在GitHub上下载：。
-
 ## 2. Demo
 
 请参见：demo.nb
